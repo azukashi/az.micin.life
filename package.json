@@ -9,6 +9,7 @@
         "lint": "next lint"
     },
     "dependencies": {
+        "@bprogress/next": "^3.2.12",
         "@devnomic/marquee": "^1.0.3",
         "@radix-ui/react-dialog": "^1.1.14",
         "@radix-ui/react-slot": "^1.2.3",
