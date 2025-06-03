@@ -49,7 +49,7 @@ export default async function About() {
                     <br />
                 </div>
             </div>
-            <div className="md:flex items-center justify-center min-h-screen md:-mt-7 px-5 md:px-10">
+            <div className="flex items-center justify-center min-h-screen md:-mt-7 px-5 md:px-10">
                 <div className="flex flex-col align-middle items-center justify-items-center gap-6">
                     <h2 className="text-4xl font-black">Contact me!</h2>
                     <div className="space-y-1">
