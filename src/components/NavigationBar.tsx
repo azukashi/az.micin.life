@@ -31,7 +31,7 @@ export function Navbar() {
     return (
         <header className="sticky top-0 z-50 w-full bg-background border-b-2 border-black backdrop-blur supports-[backdrop-filter]:bg-background/100">
             <Container>
-                <div className="flex h-16 items-center">
+                <div className="flex px-10 h-16 items-center">
                     {/* Logo */}
                     <div className="mr-4 hidden md:flex">
                         <Link href="/" className="mr-6 flex items-center space-x-2">
@@ -57,7 +57,7 @@ export function Navbar() {
                                 Main navigation menu for mobile devices
                             </SheetDescription>
                             <div className="px-6 py-6">
-                                <MobileNav />
+                                <MobileNav onNavigate={() => setIsOpen(false)} />
                             </div>
                         </SheetContent>
                     </Sheet>
@@ -100,10 +100,18 @@ export function Navbar() {
     );
 }
 
-function MobileNav() {
+interface MobileNavProps {
+    onNavigate: () => void;
+}
+
+function MobileNav({ onNavigate }: MobileNavProps) {
+    const handleLinkClick = () => {
+        onNavigate();
+    };
+
     return (
         <div className="flex flex-col space-y-6">
-            <Link href="/" className="flex items-center space-x-2">
+            <Link href="/" className="flex items-center space-x-2" onClick={handleLinkClick}>
                 <Image src="/favicon.png" width={32} height={32} alt="Logo" />
                 <span className="font-bold text-lg">Az</span>
             </Link>
@@ -113,6 +121,7 @@ function MobileNav() {
                         <Link
                             key={item.title}
                             href={item.href}
+                            onClick={handleLinkClick}
                             className="text-lg font-medium text-foreground/70 transition-colors hover:text-foreground py-2 px-3 rounded-md hover:bg-accent"
                         >
                             {item.title}
