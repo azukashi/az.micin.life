@@ -1,8 +1,9 @@
 import { ThemeProvider } from '@/components/theme-provider';
+import { Providers as ProgressProvider } from './provider';
 import { DM_Sans, DM_Mono } from 'next/font/google';
+import { Navbar } from '@/components/NavigationBar';
 import type { Metadata } from 'next';
 import './globals.css';
-import { Navbar } from '@/components/NavigationBar';
 
 const dmSans = DM_Sans({
     subsets: ['latin'],
@@ -25,8 +26,10 @@ export default function RootLayout({
                 className={`${dmSans.className} antialiased bg-[linear-gradient(to_right,#80808033_1px,transparent_1px),linear-gradient(to_bottom,#80808033_1px,transparent_1px)] bg-[size:70px_70px]`}
             >
                 <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
-                    <Navbar />
-                    {children}
+                    <ProgressProvider>
+                        <Navbar />
+                        {children}
+                    </ProgressProvider>
                 </ThemeProvider>
             </body>
         </html>
