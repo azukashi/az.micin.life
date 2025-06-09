@@ -31,7 +31,7 @@ export function Navbar() {
     return (
         <header className="sticky top-0 z-50 w-full bg-background border-b-2 border-black backdrop-blur supports-[backdrop-filter]:bg-background/100">
             <Container>
-                <div className="flex px-10 h-16 items-center">
+                <div className="flex px-5 md:px-10 h-16 items-center">
                     {/* Logo */}
                     <div className="mr-4 hidden md:flex">
                         <Link href="/" className="mr-6 flex items-center space-x-2">
