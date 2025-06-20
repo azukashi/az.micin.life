@@ -7,9 +7,38 @@ import { Icon } from '@iconify/react';
 import Markdown from 'react-markdown';
 import Image from 'next/image';
 
+type ExperienceProps = {
+    data: [
+        {
+            id: number;
+            created_at: string;
+            content: [
+                { main: string; title: string },
+                { main: string; title: string; second: string },
+                { main: string; title: string; points: string[]; second: string },
+                { main: string; title: string }
+            ];
+        },
+        {
+            id: number;
+            created_at: string;
+            content: {
+                icon: string;
+                name: string;
+                badge: string[];
+                links: { url: string; name: string }[];
+                description: string;
+            }[];
+        }
+    ];
+};
+
 export default async function Experience() {
     const supabase = createClient();
-    const exp = (await supabase.from('Experience').select('*').order('id', { ascending: true })) as any;
+    const exp: ExperienceProps = (await supabase
+        .from('Experience')
+        .select('*')
+        .order('id', { ascending: true })) as any;
     const contact = ((await supabase.from('About').select('*')) as AboutProps).data[0].contact_buttons;
 
     return (
@@ -104,6 +133,7 @@ export default async function Experience() {
                     </div>
                 </div>
             </div>
+            <code className="block bg-main/30 p-4 rounded-2xl">{JSON.stringify(exp)}</code>
         </Container>
     );
 }
