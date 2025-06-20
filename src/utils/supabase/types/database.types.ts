@@ -42,6 +42,24 @@ export type Database = {
         }
         Relationships: []
       }
+      Experience: {
+        Row: {
+          content: Json
+          created_at: string
+          id: number
+        }
+        Insert: {
+          content: Json
+          created_at?: string
+          id?: number
+        }
+        Update: {
+          content?: Json
+          created_at?: string
+          id?: number
+        }
+        Relationships: []
+      }
       Home: {
         Row: {
           buttons: Json
