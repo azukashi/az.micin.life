@@ -1,15 +1,16 @@
 import { createClient } from '@/utils/supabase/client';
 import { Container } from '@/components/Container';
-import { Button } from '@/components/ui/button';
-import { Icon } from '@iconify/react';
-import Image from 'next/image';
-import Markdown from 'react-markdown';
 import ServerCard from '@/components/ServerCard';
+import { Button } from '@/components/ui/button';
+import { AboutProps } from '../about/page';
+import { Icon } from '@iconify/react';
+import Markdown from 'react-markdown';
+import Image from 'next/image';
 
 export default async function Experience() {
     const supabase = createClient();
     const exp = (await supabase.from('Experience').select('*').order('id', { ascending: true })) as any;
-    const contact = (await supabase.from('About').select('*')).data[0].contact_buttons as any;
+    const contact = ((await supabase.from('About').select('*')) as AboutProps).data[0].contact_buttons;
 
     return (
         <Container>
@@ -38,7 +39,7 @@ export default async function Experience() {
                     <Markdown>{exp.data[0].content[2].main}</Markdown>
                     <p>This deep understanding comes from my knowledge of:</p>
                     <ul>
-                        {exp.data[0].content[2].points.map(data => {
+                        {exp.data[0].content[2].points.map((data) => {
                             return (
                                 <li key={data} className="list-disc ml-4">
                                     <Markdown>{data}</Markdown>
@@ -66,7 +67,7 @@ export default async function Experience() {
                         me.
                     </p>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                        {exp.data[1].content.map(data => {
+                        {exp.data[1].content.map((data) => {
                             return (
                                 <ServerCard
                                     name={data.name}
@@ -90,7 +91,7 @@ export default async function Experience() {
                         I can help with that. Just contact me here and ask me.
                     </p>
                     <div className="flex flex-wrap gap-4 justify-center max-w-lg">
-                        {contact.map(data => {
+                        {contact.map((data) => {
                             return (
                                 <a key={data.name} href={data.url} target="_blank" className="flex-1">
                                     <Button className="cursor-pointer">
