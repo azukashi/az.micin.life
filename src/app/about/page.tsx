@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Icon } from '@iconify/react';
 import Image from 'next/image';
 
-type AboutProps = {
+export type AboutProps = {
     data: {
         id: number;
         created_at: string;
@@ -42,7 +42,7 @@ export default async function About() {
                     <p className="text-justify text-lg">
                         Hey! I'm <span className="font-bold text-main">{about?.data[0].name}</span>. Born and live in{' '}
                         <span className="font-bold text-main">{about?.data[0].live_in}</span>.{' '}
-                        {about?.data[0].descriptions.map(data => {
+                        {about?.data[0].descriptions.map((data) => {
                             return <span key={data}>{data} </span>;
                         })}
                     </p>
@@ -53,7 +53,7 @@ export default async function About() {
                 <div className="flex flex-col align-middle items-center justify-items-center gap-6">
                     <h2 className="text-4xl font-black">Contact me!</h2>
                     <div className="space-y-1">
-                        {about?.data[0].contact_desc.map(data => {
+                        {about?.data[0].contact_desc.map((data) => {
                             return (
                                 <p key={data} className="text-center">
                                     {data}
@@ -62,7 +62,7 @@ export default async function About() {
                         })}
                     </div>
                     <div className="flex flex-wrap gap-4 justify-center max-w-lg">
-                        {about?.data[0].contact_buttons.map(data => {
+                        {about?.data[0].contact_buttons.map((data) => {
                             return (
                                 <a key={data.name} href={data.url} target="_blank" className="flex-1">
                                     <Button className="cursor-pointer">
