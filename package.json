@@ -1,7 +1,12 @@
 {
   "name": "az.micin.life",
-  "version": "0.1.0",
+  "version": "3.0.0",
   "private": true,
+  "author": {
+    "name": "Azukashiic",
+    "email": "azukashiic@icloud.com",
+    "url": "https://az.micin.life"
+  },
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
