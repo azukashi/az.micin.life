@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+[![Project banner](https://azukashiic.sirv.com/assets/portfolio/OG-2025.png?format=original&q=100)](https://az.micin.life)
+![Vercel status](https://img.shields.io/github/deployments/azukashi/az.micin.life/Production?label=Vercel&logo=vercel&logoColor=%23000&style=for-the-badge) ![Repo size](https://img.shields.io/github/repo-size/azukashi/az.micin.life?logo=github&style=for-the-badge)
 
-## Getting Started
+## ➡️ Development
 
-First, run the development server:
+### 🛠️ Requirements
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+A [node.js](https://nodejs.org) >= 18.x setup with [bun](https://bun.sh) is recommended.
+
+### 📦 Install dependencies
+
+```sh
+$ bun install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 🏃 Run it on development server
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```sh
+$ bun dev
+# $ next dev --turbopack
+#    ▲ Next.js 15.x.x (Turbopack)
+#    - Local:        http://localhost:3000
+#    - Network:      http://x.x.x.x:3000
+#
+#  ✓ Starting...
+#  ✓ Ready in 1ms
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### ⚡ Optimizing for Production
 
-## Learn More
+```sh
+$ bun build
+# $ build
+# $ next build
+#    ▲ Next.js 15.x.x
+#
+#    Creating an optimized production build ...
+#  ✓ Compiled successfully in 1.0s
+#  ✓ Linting and checking validity of types
+#  ✓ Collecting page data
+#  ✓ Generating static pages (6/6)
+#  ✓ Collecting build traces
+#  ✓ Finalizing page optimization
+#
+#  ○  (Static)   prerendered as static content
+#  ƒ  (Dynamic)  server-rendered on demand
+```
 
-To learn more about Next.js, take a look at the following resources:
+## 📃️ License
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Source code distributed under Mozilla Public License 2.0. See [LICENSE](./LICENSE) for more information.
