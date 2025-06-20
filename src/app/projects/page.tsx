@@ -18,7 +18,10 @@ type ProjectsProps = {
 
 export default async function Projects() {
     const supabase = createClient();
-    const projects: ProjectsProps = (await supabase.from('Projects').select('*')) as any;
+    const projects: ProjectsProps = (await supabase
+        .from('Projects')
+        .select('*')
+        .order('id', { ascending: true })) as any;
 
     return (
         <Container>
