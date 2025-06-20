@@ -16,8 +16,6 @@ export function ModeToggle() {
     const cycleTheme = () => {
         if (theme === 'light') {
             setTheme('dark');
-        } else if (theme === 'dark') {
-            setTheme('system');
         } else {
             setTheme('light');
         }
@@ -38,8 +36,6 @@ export function ModeToggle() {
                 return <Sun className="h-[1.2rem] w-[1.2rem]" />;
             case 'dark':
                 return <Moon className="h-[1.2rem] w-[1.2rem]" />;
-            case 'system':
-                return <Monitor className="h-[1.2rem] w-[1.2rem]" />;
             default:
                 return <Sun className="h-[1.2rem] w-[1.2rem]" />;
         }
