@@ -2,6 +2,11 @@ import { createClient } from '@/utils/supabase/client';
 import { Container } from '@/components/Container';
 import { Button } from '@/components/ui/button';
 import { Icon } from '@iconify/react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: 'Home | Az',
+};
 
 type HomeProps = {
     data: {
@@ -17,7 +22,7 @@ type HomeProps = {
             {
                 bold?: string;
                 subtitle?: string;
-            },
+            }
         ];
         buttons: {
             name: string;

@@ -5,7 +5,12 @@ import { Button } from '@/components/ui/button';
 import { AboutProps } from '../about/page';
 import { Icon } from '@iconify/react';
 import Markdown from 'react-markdown';
+import { Metadata } from 'next';
 import Image from 'next/image';
+
+export const metadata: Metadata = {
+    title: 'Experience',
+};
 
 type ExperienceProps = {
     data: [
@@ -16,7 +21,7 @@ type ExperienceProps = {
                 { main: string; title: string },
                 { main: string; title: string; second: string },
                 { main: string; title: string; points: string[]; second: string },
-                { main: string; title: string },
+                { main: string; title: string }
             ];
         },
         {
@@ -29,7 +34,7 @@ type ExperienceProps = {
                 links: { url: string; name: string }[];
                 description: string;
             }[];
-        },
+        }
     ];
 };
 
@@ -133,7 +138,7 @@ export default async function Experience() {
                     </div>
                 </div>
             </div>
-            <code className="block bg-main/30 p-4 rounded-2xl">{JSON.stringify(exp)}</code>
+            {/* <code className="block bg-main/30 p-4 rounded-2xl">{JSON.stringify(exp)}</code> */}
         </Container>
     );
 }

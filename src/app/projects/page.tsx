@@ -2,7 +2,12 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { createClient } from '@/utils/supabase/client';
 import { Container } from '@/components/Container';
 import { Icon } from '@iconify/react';
+import { Metadata } from 'next';
 import Image from 'next/image';
+
+export const metadata: Metadata = {
+    title: 'Projects',
+};
 
 type ProjectsProps = {
     data: {

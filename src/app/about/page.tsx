@@ -2,6 +2,7 @@ import { createClient } from '@/utils/supabase/client';
 import { Container } from '@/components/Container';
 import { Button } from '@/components/ui/button';
 import { Icon } from '@iconify/react';
+import { Metadata } from 'next';
 import Image from 'next/image';
 
 export type AboutProps = {
@@ -19,6 +20,10 @@ export type AboutProps = {
             icon: string;
         }[];
     }[];
+};
+
+export const metadata: Metadata = {
+    title: 'About',
 };
 
 export default async function About() {
