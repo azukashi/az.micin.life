@@ -25,7 +25,7 @@ export default async function ServerCard(props: ServerProps) {
             <CardContent>
                 <div className="flex gap-2 flex-col items-center justify-center">
                     <div className="flex gap-1 pb-2">
-                        {props.badge.map(data => {
+                        {props.badge.map((data) => {
                             if (data === 'Admin')
                                 return (
                                     <Badge key={data}>
@@ -44,7 +44,7 @@ export default async function ServerCard(props: ServerProps) {
                     <CardDescription className="text-center">{props.description}</CardDescription>
                 </div>
                 <div className="flex flex-row items-center justify-center mt-4 gap-2">
-                    {props.links.map(data => {
+                    {props.links.map((data) => {
                         return (
                             <a href={data.url} target="_blank" key={data.name}>
                                 <Button className="cursor-pointer">{data.name}</Button>

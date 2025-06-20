@@ -17,7 +17,7 @@ type HomeProps = {
             {
                 bold?: string;
                 subtitle?: string;
-            }
+            },
         ];
         buttons: {
             name: string;
@@ -51,7 +51,7 @@ export default async function Home() {
                         <span className="text-main">{home.data[0].points[1].bold}</span>.
                     </p>
                     <div className="flex flex-row gap-4">
-                        {home.data[0].buttons.map(data => {
+                        {home.data[0].buttons.map((data) => {
                             return (
                                 <a key={data.name} href={data.url} target="_blank">
                                     <Button className="font-bold cursor-pointer">

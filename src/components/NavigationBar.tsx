@@ -79,7 +79,7 @@ export function Navbar() {
                         <div className="w-full flex-1 md:w-auto md:flex-none">
                             <nav className="hidden md:flex">
                                 <ul className="flex items-center space-x-6">
-                                    {navigationItems.map(item => (
+                                    {navigationItems.map((item) => (
                                         <li key={item.title}>
                                             <Link
                                                 href={item.href}
@@ -120,7 +120,7 @@ function MobileNav({ onNavigate }: MobileNavProps) {
                 <span className="font-bold text-lg">Az</span>
             </Link>
             <div className="flex flex-col space-y-4">
-                {navigationItems.map(item => (
+                {navigationItems.map((item) => (
                     <div key={item.title}>
                         <Link
                             key={item.title}

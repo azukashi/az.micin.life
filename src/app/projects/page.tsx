@@ -29,7 +29,7 @@ export default async function Projects() {
                 <div className="flex flex-col gap-4">
                     <h1 className="text-4xl font-black">Projects</h1>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                        {projects.data.map(data => {
+                        {projects.data.map((data) => {
                             return (
                                 <Card key={data.id} className="py-0">
                                     <CardHeader className="border-b-2 border-black px-0 gap-0 overflow-hidden">
