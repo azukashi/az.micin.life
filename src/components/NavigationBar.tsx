@@ -20,6 +20,10 @@ const navigationItems = [
         href: '/about',
     },
     {
+        title: 'Experience',
+        href: '/experience',
+    },
+    {
         title: 'Projects',
         href: '/projects',
     },
