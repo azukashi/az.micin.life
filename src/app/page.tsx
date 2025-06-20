@@ -22,7 +22,7 @@ type HomeProps = {
             {
                 bold?: string;
                 subtitle?: string;
-            }
+            },
         ];
         buttons: {
             name: string;
