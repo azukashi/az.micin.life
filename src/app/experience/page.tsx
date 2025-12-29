@@ -21,7 +21,7 @@ type ExperienceProps = {
                 { main: string; title: string },
                 { main: string; title: string; second: string },
                 { main: string; title: string; points: string[]; second: string },
-                { main: string; title: string },
+                { main: string; title: string }
             ];
         },
         {
@@ -34,7 +34,7 @@ type ExperienceProps = {
                 links: { url: string; name: string }[];
                 description: string;
             }[];
-        },
+        }
     ];
 };
 

@@ -38,6 +38,12 @@ export default async function ServerCard(props: ServerProps) {
                                         <Icon icon="mdi:wrench" /> YT Mod
                                     </Badge>
                                 );
+                            if (data === 'Manager')
+                                return (
+                                    <Badge key={data}>
+                                        <Icon icon="mdi:account-tie" /> Manager
+                                    </Badge>
+                                );
                         })}
                     </div>
                     <CardTitle>{props.name}</CardTitle>
