@@ -14,7 +14,7 @@ type ServerProps = {
     }[];
 };
 
-export default async function ServerCard(props: ServerProps) {
+export default function ServerCard(props: ServerProps) {
     return (
         <Card className="w-full max-w-sm">
             <CardHeader>
