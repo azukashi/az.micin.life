@@ -17,6 +17,7 @@
     "@bprogress/next": "3.2.12",
     "@devnomic/marquee": "1.0.3",
     "@radix-ui/react-dialog": "1.1.15",
+    "@radix-ui/react-select": "^2.2.6",
     "@radix-ui/react-slot": "1.2.4",
     "@supabase/ssr": "0.8.0",
     "@supabase/supabase-js": "2.89.0",
