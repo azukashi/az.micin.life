@@ -5,7 +5,7 @@ import { Icon } from '@iconify/react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Home | Az',
+    title: 'Home | λzu',
 };
 
 type HomeProps = {
