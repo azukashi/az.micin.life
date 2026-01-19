@@ -80,16 +80,22 @@ export function ManagerExperience({ exp, contact, selectedExperience, setSelecte
                     <div className="flex flex-col gap-4">
                         {exp.data[3].content.map((data) => {
                             return (
-                                <Card key={data.name} className="w-full max-w-full px-10">
-                                    <div className="flex flex-row justify-center items-center gap-6">
+                                <Card key={data.name} className="w-full max-w-full px-5 md:px-10">
+                                    <div className="flex flex-col md:flex-row justify-center items-center gap-6">
                                         <div>
-                                            <img src={data.icon} alt={data.name} className="rounded-full size-48" />
+                                            <img
+                                                src={data.icon}
+                                                alt={data.name}
+                                                className="rounded-full size-32 md:size-48"
+                                            />
                                         </div>
 
                                         <CardContent className="flex-1">
                                             <div className="flex flex-col gap-2">
-                                                <CardTitle className="text-3xl font-bold">{data.name}</CardTitle>
-                                                <CardDescription className="text-lg">
+                                                <CardTitle className="text-2xl md:text-3xl font-bold">
+                                                    {data.name}
+                                                </CardTitle>
+                                                <CardDescription className="text-base md:text-lg">
                                                     {data.description}
                                                 </CardDescription>
                                                 <div>
