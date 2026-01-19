@@ -15,16 +15,16 @@ export const viewport: Viewport = {
     width: 'device-width',
     initialScale: 1,
     themeColor: [
-        { media: '(prefers-color-scheme: light)', color: '#ca7aff' },
-        { media: '(prefers-color-scheme: dark)', color: '#c061ff' },
+        { media: '(prefers-color-scheme: light)', color: '#ff7a05' },
+        { media: '(prefers-color-scheme: dark)', color: '#eb6d00' },
     ],
 };
 
 export const metadata: Metadata = {
     metadataBase: new URL('https://az.micin.life'),
     title: {
-        template: '%s | Az',
-        default: 'Az',
+        template: '%s | λzu',
+        default: 'λzu',
     },
     description: 'Software, full-stack web and Electrical engineer based in Indonesia.',
     alternates: {
@@ -38,12 +38,12 @@ export const metadata: Metadata = {
         type: 'website',
         url: 'https://az.micin.life',
         siteName: 'Azukashiic',
-        title: 'Az - Software, web & electrical engineer',
+        title: 'Azu - Software, web & electrical engineer',
         description: 'Software, full-stack web and Electrical engineer based in Indonesia.',
         images: [
             {
-                url: 'https://azukashiic.sirv.com/assets/portfolio/OG-2025.png?format=original&q=100',
-                alt: "🖥️ Az's Portfolio",
+                url: 'https://azukashiic.sirv.com/assets/portfolio/home.png?format=original&q=100',
+                alt: "🖥️ Azu's Portfolio",
                 type: 'image/png',
                 width: 1200,
                 height: 630,
@@ -55,12 +55,12 @@ export const metadata: Metadata = {
         card: 'summary_large_image',
         site: '@azukashiic',
         creator: '@azukashiic',
-        title: 'Az - Software, web & electrical engineer',
+        title: 'Azu - Software, web & electrical engineer',
         description: 'Software, full-stack web and Electrical engineer based in Indonesia.',
         images: [
             {
-                url: 'https://azukashiic.sirv.com/assets/portfolio/OG-2025.png?format=original&q=100',
-                alt: "🖥️ Az's Portfolio",
+                url: 'https://azukashiic.sirv.com/assets/portfolio/home.png?format=original&q=100',
+                alt: "🖥️ Azu's Portfolio",
                 type: 'image/png',
                 width: 1200,
                 height: 630,
