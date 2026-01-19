@@ -24,6 +24,17 @@ export type AboutProps = {
 
 export const metadata: Metadata = {
     title: 'About',
+    openGraph: {
+        images: [
+            {
+                url: 'https://azukashiic.sirv.com/assets/portfolio/about.png?format=original&q=100',
+                alt: "🖥️ Azu's Portfolio",
+                type: 'image/png',
+                width: 1200,
+                height: 630,
+            },
+        ],
+    },
 };
 
 export default async function About() {

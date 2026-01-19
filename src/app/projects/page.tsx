@@ -7,6 +7,17 @@ import Image from 'next/image';
 
 export const metadata: Metadata = {
     title: 'Projects',
+    openGraph: {
+        images: [
+            {
+                url: 'https://azukashiic.sirv.com/assets/portfolio/projects.png?format=original&q=100',
+                alt: "🖥️ Azu's Portfolio",
+                type: 'image/png',
+                width: 1200,
+                height: 630,
+            },
+        ],
+    },
 };
 
 type ProjectsProps = {
